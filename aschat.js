@@ -50,16 +50,29 @@ function initSendButton(){
     })
 }
 
-function addMessageItem(message, from){
-    let item = document.createElement("P");
-    item.textContent = message;
-    if(from == "user"){
-        item.classList.add("user__chat__item")
-    }else{
-        item.style.backgroundColor = "blue"
+function addMessageItem(message, from) {
+    const item = document.createElement("li");
+    const chatLi = document.createElement("li");
+    chatLi.classList.add("chat");
+
+    const chatContent = document.createElement("p");
+    chatContent.textContent = message;
+
+    if (from === "user") {
+        chatLi.classList.add("outgoing");
+    } else {
+        chatLi.classList.add("incoming");
+        const chatSymbol = document.createElement("span");
+        chatSymbol.classList.add("material-symbols-outlined");
+        chatSymbol.textContent = "smart_toy";
+        chatLi.appendChild(chatSymbol);
     }
+
+    chatLi.appendChild(chatContent);
+    item.appendChild(chatLi);
     chatHistorialContainer.appendChild(item);
 }
+
 
 function showMessage(){
     input = inputArea.value.toString();

@@ -1,33 +1,35 @@
 <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chatbot in JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="chatstyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="aschat.js" defer></script>
+  </head>
+  <body>
+    <div class="chatbot chat__container">
+      <header>
+        <h2 class="chat__title">Chatbot American School</h2>
+      </header>
+      <ul class="chatbox chathistorial__container" id="chatHistorial">
+        <!-- Tu contenido de chat actual, ajustado para mantener las clases y la estructura -->
+        <li class="chat prueba incoming">
+          <span class="material-symbols-outlined ">smart_toy</span>
+          <p>Hola 👋 <br>
+            ¿En qué puedo ayudarte hoy?</p>
+        </li>
+        <li class="chat prueba outgoing"></li>
+      </ul>
+      <div class="chat-input input__container">
+        <textarea class="chat__input" placeholder="Enter a message..." spellcheck="false" required id="input"></textarea>
+        <span id="sendButton" class="send__logo material-symbols-rounded">send</span>
+      </div>
+    </div>
 
-<html>
-    <head>
-        <link rel="stylesheet" href="chatstyles.css" type="text/css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
-    </head>
-    <body>
-        <div class="chat__container">
-
-            <div class="chat">
-                <div class="chathistorial__container" id="chatHistorial">
-                    <p class="prueba">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat illum perferendis a, numquam reiciendis v
-                        ero repelle
-                        ndus fugit laboriosam mollitia officiis. Sit quisquam quas maxime repudiandae corporis at laboriosam earum. Dolorem?</p>
-                        <p class="prueba">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat illum perferendis a, numquam reiciendis v
-                            ero repelle
-                            ndus fugit laboriosam mollitia officiis. Sit quisquam quas maxime repudiandae corporis at laboriosam earum. Dolorem?</p>
-                </div>
-    
-                <div class="input__container">
-                    <input type="text" class="chat__input" placeholder="Ingresa tu pregunta..." id="input">
-                    <button class="send__logo" target="_blank" href="" id="sendButton">
-                        <i class="ri-send-plane-2-fill"></i>
-                    </button>
-                    
-                </div>
-            </div>
-        </div>
-
-        <script src="aschat.js" type="module"></script>
-    </body>
+    <script src="aschat.js"></script>
+  </body>
 </html>
